@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-bg: 18, 18, 18; /* Almost black background */
+  --color-primary: 39, 174, 96; /* Green for primary buttons */
+  --color-secondary: 26, 188, 156; /* Muted teal for secondary accents */
+  --color-accent: 241, 196, 15; /* Bright yellow for highlights */
+  --color-text: 236, 240, 241; /* Light grey text for contrast */
+}
+
+
+body {
+  color: rgb(var(--color-text));
+  background-color: rgb(var(--color-bg));
+  background-image: radial-gradient(at 40% 20%, rgba(var(--color-primary), 0.1) 0px, transparent 50%),
+    radial-gradient(at 80% 0%, rgba(var(--color-secondary), 0.1) 0px, transparent 50%),
+    radial-gradient(at 0% 50%, rgba(var(--color-accent), 0.1) 0px, transparent 50%);
+  background-attachment: fixed;
+}
+
+/* Custom scrollbar styles */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(var(--color-bg), 0.8);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(var(--color-primary), 0.5);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(var(--color-primary), 0.8);
+}
+
+/* Gradient text effect */
+.gradient-text {
+  background: linear-gradient(45deg, rgb(var(--color-primary)), rgb(var(--color-secondary)));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+/* Animated background */
+.animated-bg {
+  background: linear-gradient(
+    -45deg,
+    rgba(var(--color-bg), 1),
+    rgba(var(--color-primary), 0.1),
+    rgba(var(--color-secondary), 0.1),
+    rgba(var(--color-bg), 1)
+  );
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+}
+
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Hover animations */
+.hover-lift {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.hover-glow {
+  transition: box-shadow 0.3s ease;
+}
+
+.hover-glow:hover {
+  box-shadow: 0 0 15px rgba(var(--color-primary), 0.5);
+}
+
