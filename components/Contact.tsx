@@ -21,7 +21,7 @@ export default function Contact() {
           transition={{ duration: 0.5 }}
           className="text-4xl font-bold mb-12 text-center gradient-text"
         >
-          Contact & Online Profiles
+          Online Profiles
         </motion.h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {profiles.map((profile, index) => (

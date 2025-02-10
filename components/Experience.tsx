@@ -5,7 +5,7 @@ const experiences = [
   {
     title: "Backend Developer",
     company: "Visionary Tech Solution",
-    period: "07/2023 - Present",
+    period: "07/2023 - 02/2024",
     responsibilities: [
       "Developing scalable web applications using Python and Django",
       "Building custom tools and software solutions for clients",
